@@ -1,0 +1,22 @@
+.playlist {
+    background-color: #32353b !important;
+    position: fixed;
+    /* top: 0; */
+    right: 0;
+}
+
+.playlist .playlist-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(
+        var(--playlist-header-height, auto) +
+            var(--playlist-bottom-header-height) - 34px
+    );
+    padding-bottom: 60px;
+    height: inherit;
+    width: var(--playlist-width);
+    height: calc(
+        100vh - (var(--playlist-header-height) + var(--bottom-height))
+    );
+    overflow-y: auto;
+}

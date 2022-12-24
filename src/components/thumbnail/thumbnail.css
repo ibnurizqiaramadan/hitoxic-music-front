@@ -1,0 +1,32 @@
+.thumbnail {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100vw - var(--playlist-width));
+    height: calc(100vh - var(--bottom-height));
+}
+
+.thumbnail img {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100vw - var(--playlist-width));
+    height: calc(100vh - var(--bottom-height));
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: -1;
+    top: -1;
+}
+
+.track {
+    z-index: 1;
+}
+
+/* .thumbnail {
+    background-image: url("https://cdn.discordapp.com/attachments/752130537455484999/1036310419159138464/unknown.png");
+    background-color: rgba(0, 0, 0, 0, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    width: 100%;
+} */

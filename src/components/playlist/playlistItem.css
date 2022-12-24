@@ -1,0 +1,16 @@
+:root {
+    --playlist-item-heigh: auto;
+}
+
+.playlist-item {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    height: var(--playlist-item-heigh) !important;
+    /* justify-content: center; */
+}
+
+.playlist-item:hover {
+    background-color: var(--color-body-backgrund);
+}
