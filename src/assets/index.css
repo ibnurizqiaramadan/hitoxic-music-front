@@ -1,6 +1,7 @@
 :root {
     --bottom-height: 100px;
     --playlist-width: 650px;
+    --playlist-min-width: 320px;
     --playlist-header-height: 170px;
     --playlist-bottom-header-height: 40px;
     --color-body-backgrund: #202225;
@@ -22,7 +23,7 @@ img {
     -moz-user-drag: none;
     -o-user-drag: none;
     -ms-user-drag: none;
-    user-drag: none;
+    /* user-drag: none; */
 }
 
 .form-control {
@@ -98,5 +99,10 @@ body {
 
     .playlist-header {
         width: 100vw !important;
+        position: static !important;
+    }
+
+    .playlist-content {
+        margin: 0 !important;
     }
 }

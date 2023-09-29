@@ -15,7 +15,7 @@ function PlaylistHeader(props:any) {
       <div className='mid-header p-3 pb-0'>
         <p className='current-playing'>Current Playing</p>
         <div className='details'>
-          <p>{currentPlaying.title}</p>
+          <p className='title'>{currentPlaying.title}</p>
           <p>{currentPlaying.duration}</p>
         </div>
       </div>

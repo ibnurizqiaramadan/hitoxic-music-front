@@ -2,8 +2,9 @@ import './playlistItem.css';
 
 function PlaylistItem(props: any) {
   return (
-    <div className='playlist-item mt-0'>
-      <h4 className=''>{ +new Date() } - hello hehe {props.number}</h4>
+    <div className='playlist-item' key={props.number}>
+      <p className={`items ${props.number}`}>{ +new Date() } - hello hehe {props.number}</p>
+      <p className={`duration`}>04:04</p>
     </div>
   );
 }

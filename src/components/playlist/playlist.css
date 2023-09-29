@@ -8,13 +8,15 @@
 .playlist .playlist-content {
     display: flex;
     flex-direction: column;
-    margin-top: calc(
+    /* margin-top: calc(
         var(--playlist-header-height, auto) +
             var(--playlist-bottom-header-height) - 34px
-    );
+    ); */
+    margin-top: 0;
     padding-bottom: 60px;
     height: inherit;
-    width: var(--playlist-width);
+    min-width: var(--playlist-min-width) !important;
+    /* width: var(--playlist-width); */
     height: calc(
         100vh - (var(--playlist-header-height) + var(--bottom-height))
     );

@@ -28,17 +28,16 @@ function Playlist() {
     myInterval = setInterval(() => {
       playlist.data.push(<PlaylistItem number={+new Date()} />);
       setPlaylist({ data: playlist.data });
-      if (count > 5) {
+      if (count >= 50) {
         // eslint-disable-next-line no-undef
         clearInterval(myInterval);
         count = 0;
         // eslint-disable-next-line no-undef
         console.log('reset', count);
-        setPlaylist({ ...initialState });
+        // setPlaylist({ data: [] });
       }
       count++;
-    }, 1000);
-    setPlaylist({ ...initialState });
+    }, 50);
     return () => {
       // eslint-disable-next-line no-undef, no-unused-vars
       clearInterval(myInterval);
@@ -48,7 +47,7 @@ function Playlist() {
   useEffect(() => {
     // eslint-disable-next-line no-undef
     console.log('tambah data');
-  });
+  }, [ initialState ]);
 
   return (
     <>
