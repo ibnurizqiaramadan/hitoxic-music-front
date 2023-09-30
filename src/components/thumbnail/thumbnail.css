@@ -1,3 +1,7 @@
+:root {
+    --blur-size: 2px;
+}
+
 .thumbnail {
     position: fixed;
     left: 0;
@@ -13,13 +17,35 @@
     width: calc(100vw - var(--playlist-width));
     height: calc(100vh - var(--bottom-height));
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 1;
     z-index: -1;
     top: -1;
 }
 
 .track {
     z-index: 1;
+    padding: 20px;
+    position: absolute;
+    /* bottom: calc(0 + var(--bottom-height)); */
+    bottom: 0;
+}
+
+.track p {
+    margin: 0;
+}
+
+.track .track-title {
+    font-size: 35px;
+}
+
+.blur img {
+    opacity: 0.3 !important;
+    filter: blur(var(--blur-size));
+    -webkit-filter: blur(var(--blur-size));
+    -moz-filter: blur(var(--blur-size));
+    -o-filter: blur(var(--blur-size));
+    -ms-filter: blur(var(--blur-size));
+    /* background-size: cover; */
 }
 
 /* .thumbnail {
