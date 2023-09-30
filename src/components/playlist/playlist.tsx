@@ -9,26 +9,29 @@ function Playlist() {
     data: [],
   };
 
-  const [ playlist, setPlaylist ] = useState<any>(initialState);
-
-  const data = {
+  const initialStateData = {
     currentPlaying: {
       title: 'Vierra - Seandainya (Official Music Videos)',
       duration: '04:04',
     },
     queue: {
-      count: 100,
+      count: 0,
       duration: '69:60',
     },
   };
+
+  const [ playlist, setPlaylist ] = useState<any>(initialState);
+  const [ data, setData ] = useState<any>(initialStateData);
 
   useEffect(() => {
     let myInterval:any = false; let count:number = 0;
     // eslint-disable-next-line no-undef
     myInterval = setInterval(() => {
       playlist.data.push(<PlaylistItem number={+new Date()} />);
+      data.queue.count += 1;
       setPlaylist({ data: playlist.data });
-      if (count >= 50) {
+      setData(data);
+      if (count >= 20) {
         // eslint-disable-next-line no-undef
         clearInterval(myInterval);
         count = 0;
